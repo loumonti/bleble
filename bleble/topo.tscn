@@ -39,7 +39,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -71,7 +71,7 @@ texture_filter = 1
 position = Vector2(-2, -2)
 scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_ia083")
-animation = &"rolling"
+animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
