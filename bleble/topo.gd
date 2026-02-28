@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
+@onready var topo = $AnimatedSprite2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -21,5 +21,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		
+	if (velocity.x > 0 or velocity.x < -1):
+		topo.play("rolling")	
+	else:
+		topo.play("idle")
+	
+	var isLeft = velocity.x < 0
+	topo.flip_h = isLeft
 	move_and_slide()
