@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cd4n1mtq3lap3"]
+[gd_scene load_steps=12 format=3 uid="uid://cd4n1mtq3lap3"]
 
 [ext_resource type="Texture2D" uid="uid://bd65vh5rh7d46" path="res://topo-idle.png" id="1_61n4o"]
+[ext_resource type="Script" uid="uid://b47rir602hnwx" path="res://topo.gd" id="1_polaf"]
 [ext_resource type="Texture2D" uid="uid://begfb4dwfik15" path="res://Sprite-0003.png" id="2_gtbfk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gtbfk"]
@@ -59,18 +60,22 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_do3a1"]
-radius = 12.0
+radius = 11.0
+height = 22.0
 
 [node name="topo" type="CharacterBody2D"]
+script = ExtResource("1_polaf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(-2, -2)
+scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_ia083")
-animation = &"idle"
-frame_progress = 0.3006556
+animation = &"rolling"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -1)
 shape = SubResource("CapsuleShape2D_do3a1")
