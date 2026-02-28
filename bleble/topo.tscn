@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd4n1mtq3lap3"]
+
+[ext_resource type="Texture2D" uid="uid://bd65vh5rh7d46" path="res://topo-idle.png" id="1_61n4o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtbfk"]
+atlas = ExtResource("1_61n4o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_polaf"]
+atlas = ExtResource("1_61n4o")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ia083"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtbfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_polaf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"rolling",
+"speed": 5.0
+}]
+
+[node name="topo" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ia083")
+animation = &"rolling"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
