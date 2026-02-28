@@ -31,7 +31,7 @@ sources/0 = SubResource("TileSetAtlasSource_epypp")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CapturaDePantalla20260228ALa(s)12_53_59P_M_" type="Sprite2D" parent="."]
+[node name="background" type="Sprite2D" parent="."]
 position = Vector2(611, 326)
 scale = Vector2(4.0191083, 3.9418604)
 texture = ExtResource("1_wtcfe")
