@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cd4n1mtq3lap3"]
+[gd_scene load_steps=11 format=3 uid="uid://cd4n1mtq3lap3"]
 
 [ext_resource type="Texture2D" uid="uid://bd65vh5rh7d46" path="res://topo-idle.png" id="1_61n4o"]
+[ext_resource type="Texture2D" uid="uid://begfb4dwfik15" path="res://Sprite-0003.png" id="2_gtbfk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gtbfk"]
 atlas = ExtResource("1_61n4o")
@@ -9,6 +10,22 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_polaf"]
 atlas = ExtResource("1_61n4o")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia083"]
+atlas = ExtResource("2_gtbfk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu4w7"]
+atlas = ExtResource("2_gtbfk")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw72f"]
+atlas = ExtResource("2_gtbfk")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l6i0"]
+atlas = ExtResource("2_gtbfk")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ia083"]
 animations = [{
@@ -23,19 +40,37 @@ animations = [{
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ia083")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu4w7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw72f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l6i0")
+}],
 "loop": true,
 "name": &"rolling",
-"speed": 5.0
+"speed": 10.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_do3a1"]
+radius = 12.0
 
 [node name="topo" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ia083")
-animation = &"rolling"
+animation = &"idle"
+frame_progress = 0.3006556
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_do3a1")
