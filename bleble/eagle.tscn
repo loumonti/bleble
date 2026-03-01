@@ -54,3 +54,5 @@ scale = Vector2(1.2, 1.2)
 position = Vector2(-2.0833335, -0.08749864)
 scale = Vector2(1.2000006, 1.2000006)
 shape = SubResource("RectangleShape2D_kgqhj")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
