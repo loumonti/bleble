@@ -42,7 +42,7 @@ texture = ExtResource("2_0e48y")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_epypp")
 
-[node name="Node2D" type="Node2D"]
+[node name="nivel 1" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(611, 326)
@@ -58,6 +58,5 @@ tile_set = SubResource("TileSet_0hol4")
 position = Vector2(115, 591)
 
 [node name="eagle" parent="." node_paths=PackedStringArray("topo") instance=ExtResource("4_0hol4")]
-position = Vector2(5, 599)
-speed = null
+position = Vector2(0, 507)
 topo = NodePath("../topo")
