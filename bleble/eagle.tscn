@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ccwu86qj4dx3q"]
+[gd_scene load_steps=8 format=3 uid="uid://ccwu86qj4dx3q"]
 
 [ext_resource type="Texture2D" uid="uid://d1vbouaph8774" path="res://eagle.png" id="1_h800l"]
 [ext_resource type="Script" uid="uid://cgbqf55m2vd8k" path="res://eagle.gd" id="1_kgqhj"]
@@ -26,7 +26,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0p1o"]
-size = Vector2(28.666668, 23.5)
+size = Vector2(28.666668, 23.659721)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kgqhj"]
 size = Vector2(19.259258, 12.1481495)
@@ -42,7 +42,8 @@ sprite_frames = SubResource("SpriteFrames_jwbaq")
 animation = &"flying"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.833333, 2.3749998)
+position = Vector2(-2.8333333, 2.4708333)
+rotation = 0.00084492593
 scale = Vector2(1.2, 1.2)
 shape = SubResource("RectangleShape2D_h0p1o")
 
