@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccwu86qj4dx3q"]
+
+[ext_resource type="Texture2D" uid="uid://d1vbouaph8774" path="res://eagle.png" id="1_h800l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgqhj"]
+atlas = ExtResource("1_h800l")
+region = Rect2(0, 0, 40, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qno5"]
+atlas = ExtResource("1_h800l")
+region = Rect2(40, 0, 40, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jwbaq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgqhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qno5")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0p1o"]
+size = Vector2(26, 15)
+
+[node name="eagle" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_jwbaq")
+animation = &"flying"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -1.5)
+shape = SubResource("RectangleShape2D_h0p1o")
