@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://c8qn0l5ak5gua"]
+[gd_scene format=3 uid="uid://bqjha7un1axo2"]
 
-[node name="game over" type="Control"]
+[node name="game over" type="Control" unique_id=754232434]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -8,7 +8,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1090147104]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "you died :>"
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1378505786]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,7 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "respawn"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="." unique_id=1731116257]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

@@ -30,3 +30,7 @@ func _physics_process(delta: float) -> void:
 	var isLeft = velocity.x < 0
 	topo.flip_h = isLeft
 	move_and_slide()
+
+
+func _on_hitbox_body_entered(body):
+	get_tree().change_scene_to_file("res://game_over.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cd4n1mtq3lap3"]
+[gd_scene format=3 uid="uid://cd4n1mtq3lap3"]
 
 [ext_resource type="Texture2D" uid="uid://b5jvc5fa3bpvv" path="res://topo-idle.png" id="1_61n4o"]
 [ext_resource type="Script" uid="uid://b47rir602hnwx" path="res://topo.gd" id="1_polaf"]
@@ -83,10 +83,14 @@ animations = [{
 radius = 11.0
 height = 22.0
 
-[node name="topo" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ia083"]
+radius = 9.0
+height = 24.0
+
+[node name="topo" type="CharacterBody2D" unique_id=1532507842]
 script = ExtResource("1_polaf")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1950173411]
 texture_filter = 1
 position = Vector2(-2, -2)
 scale = Vector2(0.875, 0.875)
@@ -94,9 +98,19 @@ sprite_frames = SubResource("SpriteFrames_ia083")
 animation = &"idle"
 frame_progress = 0.3404857
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=980138828]
 zoom = Vector2(3, 3)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1096296742]
 position = Vector2(-2, -1)
 shape = SubResource("CapsuleShape2D_do3a1")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1170482634]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1398596451]
+position = Vector2(-2, -1)
+shape = SubResource("CapsuleShape2D_ia083")
+debug_color = Color(0.92427397, 0.20702949, 0.46385533, 0.41960785)
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
