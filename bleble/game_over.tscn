@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8qn0l5ak5gua"]
+[gd_scene load_steps=3 format=3 uid="uid://c8qn0l5ak5gua"]
 
 [ext_resource type="Script" uid="uid://cuxn1wyy4uqlf" path="res://game_over.gd" id="1_y26ei"]
+[ext_resource type="Texture2D" uid="uid://bx13swb4aynir" path="res://background.png" id="2_yxx3c"]
 
 [node name="game over" type="Control"]
 layout_mode = 3
@@ -10,6 +11,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y26ei")
+
+[node name="Background" type="Sprite2D" parent="."]
+self_modulate = Color(0.6542321, 0.6542321, 0.654232, 1)
+texture_filter = 1
+position = Vector2(578.3333, 321)
+scale = Vector2(3.6333332, 3.6333334)
+texture = ExtResource("2_yxx3c")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -24,7 +32,8 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "you died :>"
+theme_override_font_sizes/font_size = 28
+text = "has muerto."
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -39,6 +48,7 @@ offset_right = -26.5
 offset_bottom = 63.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/icon_normal_color = Color(0.31246608, 0.31246608, 0.31246608, 1)
 text = "respawn"
 
 [node name="Button2" type="Button" parent="."]
