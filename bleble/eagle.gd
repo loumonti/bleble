@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 80
+@export var speed: float = 100 
 @export var topo: Node2D
 
 func _physics_process(delta: float) -> void:
