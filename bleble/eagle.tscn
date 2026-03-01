@@ -26,10 +26,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0p1o"]
-size = Vector2(26.743433, 18.757158)
+size = Vector2(26.743433, 10.072437)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kgqhj"]
-size = Vector2(21.990734, 7.9560165)
+size = Vector2(21.412022, 14.467585)
 
 [node name="eagle" type="CharacterBody2D"]
 scale = Vector2(1.2, 1.2)
@@ -42,7 +42,7 @@ sprite_frames = SubResource("SpriteFrames_jwbaq")
 animation = &"flying"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.3343925, 2.086929)
+position = Vector2(-3.3377361, -0.62250096)
 rotation = 0.00084492593
 scale = Vector2(1.2, 1.2)
 shape = SubResource("RectangleShape2D_h0p1o")
@@ -51,6 +51,8 @@ shape = SubResource("RectangleShape2D_h0p1o")
 scale = Vector2(1.2, 1.2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(-2.0833335, -0.08749864)
-scale = Vector2(1.2000006, 1.2000006)
+position = Vector2(-1.7361115, -1.7361116)
+scale = Vector2(1.2000009, 1.2000009)
 shape = SubResource("RectangleShape2D_kgqhj")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
