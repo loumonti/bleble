@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://byfo1ky7bqr14"]
+[gd_scene load_steps=3 format=3 uid="uid://byfo1ky7bqr14"]
 
 [ext_resource type="Script" uid="uid://cdy5ijujn1n1g" path="res://control.gd" id="1_0fbet"]
+[ext_resource type="Texture2D" uid="uid://cd7k7cqwxkt1v" path="res://title-sheet.png" id="2_62e2m"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,6 +12,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0fbet")
 
+[node name="TitleSheet" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(575.2222, 324)
+scale = Vector2(3.588889, 3.588889)
+texture = ExtResource("2_62e2m")
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -18,10 +25,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -84.75
-offset_top = 81.75
-offset_right = 84.75
-offset_bottom = 142.25
+offset_left = -419.0
+offset_top = -89.0
+offset_right = -249.5
+offset_bottom = -28.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "start :3"
@@ -33,10 +40,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -62.0
-offset_top = -63.0
-offset_right = 62.0
-offset_bottom = -40.0
+offset_left = -393.0
+offset_top = -343.0
+offset_right = -269.0
+offset_bottom = -320.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "por monti y tats"
