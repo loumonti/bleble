@@ -66,6 +66,10 @@ position = Vector2(581, 443)
 scale = Vector2(4.0191083, 3.9418604)
 texture = ExtResource("1_0hol4")
 
+[node name="Area2D" parent="." instance=ExtResource("7_k5qh3")]
+visible = false
+position = Vector2(396, 132)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
 position = Vector2(2, 1)
@@ -88,6 +92,3 @@ position = Vector2(866, 583)
 
 [node name="rata2" parent="." instance=ExtResource("5_rxi77")]
 position = Vector2(610, 428)
-
-[node name="Area2D" parent="." instance=ExtResource("7_k5qh3")]
-position = Vector2(396, 132)
