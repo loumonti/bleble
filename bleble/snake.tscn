@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfmnshh1to2m3"]
+
+[ext_resource type="Script" uid="uid://cnyrc24fyfetq" path="res://rata.gd" id="1_gxkgb"]
+[ext_resource type="Texture2D" uid="uid://td6v7yckpeat" path="res://Sprite-0005.png" id="2_2x2sd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxkgb"]
+atlas = ExtResource("2_2x2sd")
+region = Rect2(0, 52, 32, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2x2sd"]
+atlas = ExtResource("2_2x2sd")
+region = Rect2(32, 52, 32, 26)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_okehy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxkgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2x2sd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcwkr"]
+size = Vector2(31, 19)
+
+[node name="snake" type="CharacterBody2D"]
+script = ExtResource("1_gxkgb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_okehy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_jcwkr")
