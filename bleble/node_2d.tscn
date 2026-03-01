@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cvjh3woqhl5fj"]
+[gd_scene load_steps=7 format=4 uid="uid://cvjh3woqhl5fj"]
 
 [ext_resource type="Texture2D" uid="uid://bkqb146xfaoki" path="res://Captura de Pantalla 2026-02-28 a la(s) 12.53.59 p. m..png" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://dgoktn4cr05kj" path="res://spelunky_shop.png" id="2_0e48y"]
 [ext_resource type="PackedScene" uid="uid://cd4n1mtq3lap3" path="res://topo.tscn" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://ccwu86qj4dx3q" path="res://eagle.tscn" id="4_0hol4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epypp"]
 texture = ExtResource("2_0e48y")
@@ -54,4 +55,9 @@ tile_map_data = PackedByteArray("AAD//ycAAAAAAAIAAAAAACcAAAAAAAIAAAABACcAAAAAAAI
 tile_set = SubResource("TileSet_0hol4")
 
 [node name="topo" parent="." instance=ExtResource("3_epypp")]
-position = Vector2(52, 581)
+position = Vector2(115, 591)
+
+[node name="eagle" parent="." node_paths=PackedStringArray("topo") instance=ExtResource("4_0hol4")]
+position = Vector2(5, 599)
+speed = null
+topo = NodePath("../topo")

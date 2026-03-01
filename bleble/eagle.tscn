@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccwu86qj4dx3q"]
+[gd_scene load_steps=8 format=3 uid="uid://ccwu86qj4dx3q"]
 
 [ext_resource type="Texture2D" uid="uid://d1vbouaph8774" path="res://eagle.png" id="1_h800l"]
+[ext_resource type="Script" uid="uid://cgbqf55m2vd8k" path="res://eagle.gd" id="1_kgqhj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kgqhj"]
 atlas = ExtResource("1_h800l")
@@ -25,9 +26,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0p1o"]
+size = Vector2(28, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgqhj"]
 size = Vector2(26, 15)
 
 [node name="eagle" type="CharacterBody2D"]
+script = ExtResource("1_kgqhj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -35,5 +40,11 @@ sprite_frames = SubResource("SpriteFrames_jwbaq")
 animation = &"flying"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -1.5)
+position = Vector2(-3, 2.5)
 shape = SubResource("RectangleShape2D_h0p1o")
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(-3, -1)
+shape = SubResource("RectangleShape2D_kgqhj")
