@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://drm2t6kfdrtpw"]
+[gd_scene format=3 uid="uid://drm2t6kfdrtpw"]
 
 [ext_resource type="Texture2D" uid="uid://bkqb146xfaoki" path="res://standby rata.png" id="1_7sugi"]
 [ext_resource type="Script" uid="uid://cnyrc24fyfetq" path="res://rata.gd" id="1_i74p7"]
