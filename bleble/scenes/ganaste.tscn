@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ds58hibdyt2gy"]
 
-[ext_resource type="Script" uid="uid://ba1qrrye3vxeq" path="res://ganaste.gd" id="1_l0yqd"]
+[ext_resource type="Script" uid="uid://ba1qrrye3vxeq" path="res://scripts/ganaste.gd" id="1_l0yqd"]
 [ext_resource type="Texture2D" uid="uid://bx13swb4aynir" path="res://background.png" id="2_cnpyd"]
 
 [node name="ganaste" type="Control"]

@@ -16,3 +16,7 @@ func _physics_process(delta: float) -> void:
 
 	var isLeft = velocity.x < 0
 	eagle.flip_h = isLeft
+
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	pass

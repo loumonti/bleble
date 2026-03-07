@@ -33,4 +33,4 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_hitbox_body_entered(body):
-	get_tree().change_scene_to_file("res://game_over.tscn")
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")

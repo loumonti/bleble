@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://byfo1ky7bqr14"]
 
-[ext_resource type="Script" uid="uid://cdy5ijujn1n1g" path="res://control.gd" id="1_0fbet"]
-[ext_resource type="Texture2D" uid="uid://cd7k7cqwxkt1v" path="res://title-sheet.png" id="2_62e2m"]
+[ext_resource type="Script" uid="uid://cdy5ijujn1n1g" path="res://scripts/control.gd" id="1_r67kn"]
+[ext_resource type="Texture2D" uid="uid://cd7k7cqwxkt1v" path="res://title-sheet.png" id="2_brbbq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,13 +10,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_0fbet")
+script = ExtResource("1_r67kn")
 
 [node name="TitleSheet" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(575.2222, 324)
 scale = Vector2(3.588889, 3.588889)
-texture = ExtResource("2_62e2m")
+texture = ExtResource("2_brbbq")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1

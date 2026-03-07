@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1vbouaph8774"
-path="res://.godot/imported/eagle.png-6c690ac6775d78c1bf8ce017525c043e.ctex"
+uid="uid://ckx5srisw2dl5"
+path="res://.godot/imported/topo-cavando.png-0d0e7a6168c925ff112e01355260ff8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://eagle.png"
-dest_files=["res://.godot/imported/eagle.png-6c690ac6775d78c1bf8ce017525c043e.ctex"]
+source_file="res://sprites/topo-cavando.png"
+dest_files=["res://.godot/imported/topo-cavando.png-0d0e7a6168c925ff112e01355260ff8e.ctex"]
 
 [params]
 

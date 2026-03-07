@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://cd4n1mtq3lap3"]
 
-[ext_resource type="Texture2D" uid="uid://b5jvc5fa3bpvv" path="res://topo-idle.png" id="1_61n4o"]
-[ext_resource type="Script" uid="uid://b47rir602hnwx" path="res://topo.gd" id="1_polaf"]
-[ext_resource type="Texture2D" uid="uid://ckx5srisw2dl5" path="res://topo-cavando.png" id="2_ia083"]
-[ext_resource type="Texture2D" uid="uid://nnj0sdrpw28q" path="res://topo-rodando.png" id="4_eu4w7"]
+[ext_resource type="Texture2D" uid="uid://b5jvc5fa3bpvv" path="res://sprites/topo-idle.png" id="1_61n4o"]
+[ext_resource type="Script" uid="uid://b47rir602hnwx" path="res://scripts/topo.gd" id="1_polaf"]
+[ext_resource type="Texture2D" uid="uid://ckx5srisw2dl5" path="res://sprites/topo-cavando.png" id="2_ia083"]
+[ext_resource type="Texture2D" uid="uid://nnj0sdrpw28q" path="res://sprites/topo-rodando.png" id="4_eu4w7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tw72f"]
 atlas = ExtResource("2_ia083")

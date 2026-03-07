@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rvftqn6o6uk0"
-path="res://.godot/imported/bleble.png-772a9cc62b3a8e89537b236f8ae2e969.ctex"
+uid="uid://d1vbouaph8774"
+path="res://.godot/imported/eagle.png-760178af0c93985eaa173e66f279d4a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bleble.png"
-dest_files=["res://.godot/imported/bleble.png-772a9cc62b3a8e89537b236f8ae2e969.ctex"]
+source_file="res://sprites/eagle.png"
+dest_files=["res://.godot/imported/eagle.png-760178af0c93985eaa173e66f279d4a4.ctex"]
 
 [params]
 

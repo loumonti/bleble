@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://td6v7yckpeat"
-path="res://.godot/imported/Sprite-0005.png-bc5b3a923b5fb5707d4af74c6c421d10.ctex"
+uid="uid://nnj0sdrpw28q"
+path="res://.godot/imported/topo-rodando.png-8669bff89767e74f516f4f03efd35990.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite-0005.png"
-dest_files=["res://.godot/imported/Sprite-0005.png-bc5b3a923b5fb5707d4af74c6c421d10.ctex"]
+source_file="res://sprites/topo-rodando.png"
+dest_files=["res://.godot/imported/topo-rodando.png-8669bff89767e74f516f4f03efd35990.ctex"]
 
 [params]
 
