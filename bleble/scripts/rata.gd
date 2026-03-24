@@ -29,5 +29,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body):
+	print("contactooooo")
+	if body.is_in_group("enemy"):
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	if body == topo:
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
