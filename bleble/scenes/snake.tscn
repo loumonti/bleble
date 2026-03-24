@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://dfmnshh1to2m3"]
+[gd_scene load_steps=8 format=3 uid="uid://dfmnshh1to2m3"]
 
 [ext_resource type="Script" uid="uid://cnyrc24fyfetq" path="res://scripts/rata.gd" id="1_gxkgb"]
 [ext_resource type="Texture2D" uid="uid://td6v7yckpeat" path="res://sprites/Sprite-0005.png" id="2_2x2sd"]
@@ -26,7 +26,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jcwkr"]
-size = Vector2(31, 19)
+size = Vector2(30, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yc36x"]
+size = Vector2(30, 15)
 
 [node name="snake" type="CharacterBody2D"]
 script = ExtResource("1_gxkgb")
@@ -36,13 +39,13 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_okehy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
+position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_jcwkr")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_jcwkr")
+position = Vector2(1, -4.5)
+shape = SubResource("RectangleShape2D_yc36x")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

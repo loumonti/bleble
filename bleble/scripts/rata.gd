@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @onready var rata = $AnimatedSprite2D
-
+@export var topo = Node2D
 const speed = 65.0
 
 var direction = 1
@@ -27,5 +27,7 @@ func _physics_process(delta: float) -> void:
 	var isLeft = velocity.x > 0
 	rata.flip_h = isLeft
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+
+func _on_area_2d_body_entered(body):
+	if body == topo:
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")

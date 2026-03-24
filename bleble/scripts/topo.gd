@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var topo = $AnimatedSprite2D
+@onready var spikes = get_parent().get_node("Spikes")
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -23,14 +24,18 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 	if (velocity.x > 0 or velocity.x < -1):
-		topo.play("rolling")	
+		topo.play("rolling")
 	else:
 		topo.play("idle")
 	
 	var isLeft = velocity.x < 0
 	topo.flip_h = isLeft
 	move_and_slide()
+	
+	
+	var check_position = global_position + Vector2.DOWN * 10
+	var cell = spikes.local_to_map(spikes.to_local(check_position))
+	var tile_data = spikes.get_cell_tile_data(cell)
 
-
-func _on_hitbox_body_entered(body):
-	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+	if tile_data and tile_data.get_custom_data("malote"):
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")

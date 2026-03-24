@@ -18,5 +18,7 @@ func _physics_process(delta: float) -> void:
 	eagle.flip_h = isLeft
 
 
-func _on_hitbox_body_entered(body: Node2D) -> void:
-	pass
+func _on_hitbox_body_entered(body):
+	if body == topo:
+		print("touch detected")
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")

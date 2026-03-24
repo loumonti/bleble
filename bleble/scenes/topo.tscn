@@ -83,11 +83,10 @@ animations = [{
 radius = 11.0
 height = 22.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ia083"]
-radius = 8.0
-height = 18.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa82c"]
+size = Vector2(22, 24)
 
-[node name="topo" type="CharacterBody2D"]
+[node name="topo" type="CharacterBody2D" groups=["topo"]]
 script = ExtResource("1_polaf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -105,12 +104,9 @@ zoom = Vector2(3, 3)
 position = Vector2(-2, -1)
 shape = SubResource("CapsuleShape2D_do3a1")
 
-[node name="hitbox" type="Area2D" parent="."]
-collision_mask = 4
+[node name="hitbox" type="Area2D" parent="." groups=["topo"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(-2, -1)
-shape = SubResource("CapsuleShape2D_ia083")
+shape = SubResource("RectangleShape2D_sa82c")
 debug_color = Color(0.92427397, 0.20702949, 0.46385533, 0.41960785)
-
-[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
