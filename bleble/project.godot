@@ -30,7 +30,6 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 [global_group]
 
 topo=""
-enemy=""
 
 [physics]
 
