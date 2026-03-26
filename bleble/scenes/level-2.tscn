@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://dxjg1qtjj2q5r"]
 
-[ext_resource type="Texture2D" uid="uid://bx13swb4aynir" path="res://background.png" id="1_4ojds"]
+[ext_resource type="Texture2D" uid="uid://vm6jniv8qbeq" path="res://background2.png" id="1_j3ljc"]
 [ext_resource type="Texture2D" uid="uid://dspcgri3kasy1" path="res://tileset.png" id="2_4ojds"]
 [ext_resource type="PackedScene" uid="uid://cd4n1mtq3lap3" path="res://scenes/topo.tscn" id="3_xkliy"]
 [ext_resource type="PackedScene" uid="uid://ccwu86qj4dx3q" path="res://scenes/eagle.tscn" id="4_itogy"]
@@ -45,10 +45,11 @@ sources/0 = SubResource("TileSetAtlasSource_epypp")
 [node name="nivel 2" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
+modulate = Color(0.8474744, 0.84747446, 0.84747446, 1)
 texture_filter = 1
 position = Vector2(581, 443)
 scale = Vector2(4.0191083, 3.9418604)
-texture = ExtResource("1_4ojds")
+texture = ExtResource("1_j3ljc")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
