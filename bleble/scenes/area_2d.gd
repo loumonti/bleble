@@ -13,5 +13,5 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body):
-	if body == topo:
+	if body.is_in_group("topo"):
 		get_tree().change_scene_to_file("res://scenes/ganaste.tscn")
