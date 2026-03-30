@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://q06xlo16wl1t"]
+
+[ext_resource type="Texture2D" path="res://topo-idle.png" id="1_61n4o"]
+[ext_resource type="Script" path="res://topo.gd" id="1_polaf"]
+[ext_resource type="Texture2D" path="res://topo-cavando.png" id="2_ia083"]
+[ext_resource type="Texture2D" path="res://topo-rodando.png" id="4_eu4w7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw72f"]
+atlas = ExtResource("2_ia083")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l6i0"]
+atlas = ExtResource("2_ia083")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_do3a1"]
+atlas = ExtResource("1_61n4o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_becqc"]
+atlas = ExtResource("1_61n4o")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2d56"]
+atlas = ExtResource("4_eu4w7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cw5uf"]
+atlas = ExtResource("4_eu4w7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcab8"]
+atlas = ExtResource("4_eu4w7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7tst"]
+atlas = ExtResource("4_eu4w7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ia083"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw72f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l6i0")
+}],
+"loop": true,
+"name": &"digging",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_do3a1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_becqc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2d56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cw5uf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcab8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7tst")
+}],
+"loop": true,
+"name": &"rolling",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_do3a1"]
+radius = 11.0
+height = 22.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ia083"]
+radius = 8.0
+height = 18.0
+
+[node name="topo" type="CharacterBody2D" unique_id=1015499754]
+script = ExtResource("1_polaf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1104385521]
+texture_filter = 1
+position = Vector2(-2, -2)
+scale = Vector2(0.875, 0.875)
+sprite_frames = SubResource("SpriteFrames_ia083")
+animation = &"idle"
+frame_progress = 0.3404857
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1874264427]
+zoom = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=211914303]
+position = Vector2(-2, -1)
+shape = SubResource("CapsuleShape2D_do3a1")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1576584361]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=373906998]
+position = Vector2(-2, -1)
+shape = SubResource("CapsuleShape2D_ia083")
+debug_color = Color(0.92427397, 0.20702949, 0.46385533, 0.41960785)
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
