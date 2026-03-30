@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b47rir602hnwx" path="res://scripts/topo.gd" id="1_polaf"]
 [ext_resource type="Texture2D" uid="uid://ckx5srisw2dl5" path="res://sprites/topo-cavando.png" id="2_ia083"]
 [ext_resource type="Texture2D" uid="uid://nnj0sdrpw28q" path="res://sprites/topo-rodando.png" id="4_eu4w7"]
-[ext_resource type="Script" uid="uid://dcxkx6vjwuwlb" path="res://scenes/hitbox.gd" id="5_pnp85"]
+[ext_resource type="Script" uid="uid://dcxkx6vjwuwlb" path="res://scripts/hitbox.gd" id="5_pnp85"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tw72f"]
 atlas = ExtResource("2_ia083")
