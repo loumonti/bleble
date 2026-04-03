@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c6x6e127xhlf"]
+[gd_scene load_steps=2 format=3 uid="uid://dnx4vd86amwue"]
 
 [ext_resource type="Texture2D" uid="uid://cd7k7cqwxkt1v" path="res://title-sheet.png" id="2_62e2m"]
 [ext_resource type="Texture2D" uid="uid://lls33fx8273g" path="res://botones.png" id="2_qtu10"]
@@ -11,7 +11,7 @@ region = Rect2(0.5845051, 36.922714, 28.008871, 16.282715)
 atlas = ExtResource("2_qtu10")
 region = Rect2(1.0928497, 37.226475, 27.597115, 16.01054)
 
-[node name="Control" type="Control" unique_id=2081970537]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,13 +19,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TitleSheet" type="Sprite2D" parent="." unique_id=127180439]
+[node name="TitleSheet" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(575.2222, 324)
 scale = Vector2(3.588889, 3.588889)
 texture = ExtResource("2_62e2m")
 
-[node name="Button" type="Button" parent="." unique_id=770539249]
+[node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -42,7 +42,7 @@ icon = SubResource("AtlasTexture_62e2m")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label2" type="Label" parent="." unique_id=1785955537]
+[node name="Label2" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
