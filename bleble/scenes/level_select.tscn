@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bt34c152kemq0"]
+[gd_scene load_steps=3 format=3 uid="uid://bt34c152kemq0"]
 
-[ext_resource type="Texture2D" uid="uid://vm6jniv8qbeq" path="res://background2.png" id="1_il3u1"]
+[ext_resource type="Script" uid="uid://mptbj4eihu57" path="res://scripts/level_select.gd" id="1_p0wlc"]
+[ext_resource type="Texture2D" uid="uid://vm6jniv8qbeq" path="res://background2.png" id="2_2epne"]
 
 [node name="levelSelect" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_p0wlc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.5890956, 0.5890956, 0.5890956, 1)
@@ -19,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_il3u1")
+texture = ExtResource("2_2epne")
 
 [node name="level1" type="Button" parent="."]
 layout_mode = 1
@@ -33,6 +35,7 @@ offset_top = -96.0
 offset_right = 171.46399
 offset_bottom = 96.0
 grow_vertical = 2
+text = "LEVEL 1"
 
 [node name="level2" type="Button" parent="."]
 layout_mode = 1
@@ -47,6 +50,7 @@ offset_right = 166.5
 offset_bottom = 96.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "LEVEL 2"
 
 [node name="level3" type="Button" parent="."]
 layout_mode = 1
@@ -61,6 +65,7 @@ offset_right = 166.07996
 offset_bottom = 96.0
 grow_horizontal = 0
 grow_vertical = 2
+text = "LEVEL 3"
 
 [node name="back" type="Button" parent="."]
 layout_mode = 1
@@ -76,3 +81,7 @@ offset_bottom = 22.83197
 grow_horizontal = 2
 grow_vertical = 0
 text = "back"
+
+[connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
