@@ -1,13 +1,13 @@
-[gd_scene load_steps=12 format=4 uid="uid://dxjg1qtjj2q5r"]
+[gd_scene load_steps=12 format=4 uid="uid://djwm4rx8kl6s3"]
 
-[ext_resource type="Texture2D" uid="uid://vm6jniv8qbeq" path="res://background2.png" id="1_j3ljc"]
-[ext_resource type="Texture2D" uid="uid://dspcgri3kasy1" path="res://tileset.png" id="2_4ojds"]
-[ext_resource type="PackedScene" uid="uid://cd4n1mtq3lap3" path="res://scenes/topo.tscn" id="3_xkliy"]
-[ext_resource type="PackedScene" uid="uid://ccwu86qj4dx3q" path="res://scenes/eagle.tscn" id="4_itogy"]
-[ext_resource type="PackedScene" uid="uid://5gdgvbfvbpi1" path="res://scenes/area_2d.tscn" id="5_tywjk"]
+[ext_resource type="Texture2D" uid="uid://d10f8myj0jqht" path="res://background3.png" id="1_2nk1a"]
+[ext_resource type="Texture2D" uid="uid://dspcgri3kasy1" path="res://tileset.png" id="2_awf0l"]
+[ext_resource type="PackedScene" uid="uid://cd4n1mtq3lap3" path="res://scenes/topo.tscn" id="3_5n3nx"]
+[ext_resource type="PackedScene" uid="uid://ccwu86qj4dx3q" path="res://scenes/eagle.tscn" id="4_8q2mf"]
+[ext_resource type="PackedScene" uid="uid://5gdgvbfvbpi1" path="res://scenes/area_2d.tscn" id="5_khdjt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_epypp"]
-texture = ExtResource("2_4ojds")
+texture = ExtResource("2_awf0l")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -44,7 +44,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_epypp")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j3ljc"]
-texture = ExtResource("2_4ojds")
+texture = ExtResource("2_awf0l")
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -64,7 +64,7 @@ custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_j3ljc")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oqle2"]
-texture = ExtResource("2_4ojds")
+texture = ExtResource("2_awf0l")
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -87,19 +87,18 @@ sources/0 = SubResource("TileSetAtlasSource_oqle2")
 [node name="nivel 2" type="Node2D"]
 
 [node name="background" type="TextureRect" parent="."]
-modulate = Color(0.8175213, 0.8175213, 0.81752115, 1)
+modulate = Color(0.8474744, 0.84747446, 0.84747446, 1)
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -113.0
-offset_top = -35.000008
-offset_right = 207.0
-offset_bottom = 145.0
+offset_top = -2.0
+offset_right = 320.0
+offset_bottom = 178.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(4.0191083, 3.9418604)
-texture = ExtResource("1_j3ljc")
+scale = Vector2(3.8165064, 3.7431526)
+texture = ExtResource("1_2nk1a")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -116,13 +115,13 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAASACEAAAADAAMAAAATACAAAAADAAMAAAAWACAAAAADAAMAAAAXACAAAAADAAMAAAAbACAAAAADAAMAAAAoAB8AAAADAAMAAAArAB4AAAADAAMAAAAuAB0AAAADAAMAAAAQAB8AAAAAAAMAAAAcACEAAAAAAAMAAAAdACEAAAAAAAMAAAAhACEAAAAAAAMAAAAjAB8AAAAAAAMAAAAlAB4AAAAAAAMAAAA0ABgAAAAAAAMAAAA2ABYAAAAAAAMAAAA8ABQAAAAAAAMAAAA9ABEAAAAAAAMAAAA3ABEAAAAAAAMAAAA7AAsAAAAAAAMAAAA=")
 tile_set = SubResource("TileSet_n35kj")
 
-[node name="topo" parent="." instance=ExtResource("3_xkliy")]
+[node name="topo" parent="." instance=ExtResource("3_5n3nx")]
 position = Vector2(115, 591)
 
-[node name="eagle" parent="." node_paths=PackedStringArray("topo") instance=ExtResource("4_itogy")]
+[node name="eagle" parent="." node_paths=PackedStringArray("topo") instance=ExtResource("4_8q2mf")]
 position = Vector2(58, 499.00003)
 topo = NodePath("../topo")
 
-[node name="Area2D" parent="." instance=ExtResource("5_tywjk")]
+[node name="Area2D" parent="." instance=ExtResource("5_khdjt")]
 visible = false
 position = Vector2(892, 107)

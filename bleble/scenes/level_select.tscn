@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt34c152kemq0"]
+[gd_scene load_steps=5 format=3 uid="uid://bt34c152kemq0"]
 
 [ext_resource type="Script" uid="uid://mptbj4eihu57" path="res://scripts/level_select.gd" id="1_p0wlc"]
 [ext_resource type="Texture2D" uid="uid://vm6jniv8qbeq" path="res://background2.png" id="2_2epne"]
+[ext_resource type="Script" uid="uid://bgkpas3xrl70u" path="res://scenes/level_1_button.gd" id="3_2epne"]
+[ext_resource type="Script" uid="uid://6pknf4wgvx6b" path="res://scenes/level_2_button.gd" id="4_rif6e"]
 
 [node name="levelSelect" type="Control"]
 layout_mode = 3
@@ -23,7 +25,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_2epne")
 
-[node name="level1" type="Button" parent="."]
+[node name="level1" type="Button" parent="." groups=["level_buttons"]]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.16800001
@@ -36,8 +38,9 @@ offset_right = 171.46399
 offset_bottom = 96.0
 grow_vertical = 2
 text = "LEVEL 1"
+script = ExtResource("3_2epne")
 
-[node name="level2" type="Button" parent="."]
+[node name="level2" type="Button" parent="." groups=["level_buttons"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -51,8 +54,9 @@ offset_bottom = 96.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "LEVEL 2"
+script = ExtResource("4_rif6e")
 
-[node name="level3" type="Button" parent="."]
+[node name="level3" type="Button" parent="." groups=["level_buttons"]]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.83500004

@@ -84,9 +84,17 @@ sources/0 = SubResource("TileSetAtlasSource_8ibgy")
 
 [node name="nivel 1" type="Node2D"]
 
-[node name="background" type="Sprite2D" parent="."]
+[node name="background" type="TextureRect" parent="."]
 texture_filter = 1
-position = Vector2(581, 443)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = 29.999998
+offset_right = 280.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(4.0191083, 3.9418604)
 texture = ExtResource("1_0hol4")
 
