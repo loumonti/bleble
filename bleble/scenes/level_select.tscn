@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bt34c152kemq0"]
+[gd_scene load_steps=6 format=3 uid="uid://bt34c152kemq0"]
 
 [ext_resource type="Script" uid="uid://mptbj4eihu57" path="res://scripts/level_select.gd" id="1_p0wlc"]
 [ext_resource type="Texture2D" uid="uid://vm6jniv8qbeq" path="res://background2.png" id="2_2epne"]
 [ext_resource type="Script" uid="uid://bgkpas3xrl70u" path="res://scenes/level_1_button.gd" id="3_2epne"]
 [ext_resource type="Script" uid="uid://6pknf4wgvx6b" path="res://scenes/level_2_button.gd" id="4_rif6e"]
+[ext_resource type="Script" uid="uid://cda5r6edrfi0r" path="res://scenes/level_3_button.gd" id="5_chg43"]
 
 [node name="levelSelect" type="Control"]
 layout_mode = 3
@@ -70,6 +71,7 @@ offset_bottom = 96.0
 grow_horizontal = 0
 grow_vertical = 2
 text = "LEVEL 3"
+script = ExtResource("5_chg43")
 
 [node name="back" type="Button" parent="."]
 layout_mode = 1
@@ -88,4 +90,5 @@ text = "back"
 
 [connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="level3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
