@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bt34c152kemq0"]
+[gd_scene load_steps=2 format=3 uid="uid://bt34c152kemq0"]
+
+[ext_resource type="Texture2D" uid="uid://vm6jniv8qbeq" path="res://background2.png" id="1_il3u1"]
 
 [node name="levelSelect" type="Control"]
 layout_mode = 3
@@ -9,9 +11,68 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.5890956, 0.5890956, 0.5890956, 1)
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("1_il3u1")
+
+[node name="level1" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16800001
+anchor_top = 0.5
+anchor_right = 0.16800001
+anchor_bottom = 0.5
+offset_left = -161.53601
+offset_top = -96.0
+offset_right = 171.46399
+offset_bottom = 96.0
+grow_vertical = 2
+
+[node name="level2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.5
+offset_top = -96.0
+offset_right = 166.5
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="level3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.83500004
+anchor_top = 0.5
+anchor_right = 0.83500004
+anchor_bottom = 0.5
+offset_left = -166.92004
+offset_top = -96.0
+offset_right = 166.07996
+offset_bottom = 96.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.86600006
+anchor_right = 0.5
+anchor_bottom = 0.86600006
+offset_left = -53.5
+offset_top = -23.16803
+offset_right = 53.5
+offset_bottom = 22.83197
+grow_horizontal = 2
+grow_vertical = 0
+text = "back"
