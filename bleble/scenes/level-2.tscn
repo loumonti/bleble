@@ -87,7 +87,7 @@ sources/0 = SubResource("TileSetAtlasSource_oqle2")
 [node name="nivel 2" type="Node2D"]
 
 [node name="background" type="TextureRect" parent="."]
-modulate = Color(0.8175213, 0.8175213, 0.81752115, 1)
+modulate = Color(0.40621942, 0.50031155, 0.5854641, 1)
 texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
