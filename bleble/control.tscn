@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://c6x6e127xhlf"]
 
-[ext_resource type="Script" path="res://control.gd" id="1_0fbet"]
 [ext_resource type="Texture2D" uid="uid://cd7k7cqwxkt1v" path="res://title-sheet.png" id="2_62e2m"]
+[ext_resource type="Texture2D" uid="uid://lls33fx8273g" path="res://botones.png" id="2_qtu10"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62e2m"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(0.5845051, 36.922714, 28.008871, 16.282715)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbped"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(1.0928497, 37.226475, 27.597115, 16.01054)
 
 [node name="Control" type="Control" unique_id=2081970537]
 layout_mode = 3
@@ -10,7 +18,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_0fbet")
 
 [node name="TitleSheet" type="Sprite2D" parent="." unique_id=127180439]
 texture_filter = 1
@@ -31,7 +38,9 @@ offset_right = -249.5
 offset_bottom = -28.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "start :3"
+icon = SubResource("AtlasTexture_62e2m")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Label2" type="Label" parent="." unique_id=1785955537]
 layout_mode = 1
@@ -47,5 +56,16 @@ offset_bottom = -320.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "por monti y tats"
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1523832736]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.031000001
+offset_left = 116.0
+offset_top = 104.0
+offset_right = 136.416
+offset_bottom = 123.912
+texture_normal = SubResource("AtlasTexture_kbped")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
