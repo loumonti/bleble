@@ -1,17 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnx4vd86amwue"]
+[gd_scene format=3 uid="uid://dnx4vd86amwue"]
 
 [ext_resource type="Texture2D" uid="uid://cd7k7cqwxkt1v" path="res://title-sheet.png" id="2_62e2m"]
-[ext_resource type="Texture2D" uid="uid://lls33fx8273g" path="res://botones.png" id="2_qtu10"]
+[ext_resource type="Texture2D" uid="uid://b2k6av5yepqrx" path="res://botonesstart.png" id="2_qtu10"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ee4bf"]
+load_path = "res://.godot/imported/botones.png-acc91e937ce8634700d8d20bf36d540f.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_62e2m"]
-atlas = ExtResource("2_qtu10")
+atlas = SubResource("CompressedTexture2D_ee4bf")
 region = Rect2(0.5845051, 36.922714, 28.008871, 16.282715)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fj5cn"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(0.257, 17.88, 28, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iy58a"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(0.489, 35.597, 28, 15.6)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kbped"]
 atlas = ExtResource("2_qtu10")
-region = Rect2(1.0928497, 37.226475, 27.597115, 16.01054)
+region = Rect2(0.345, 0.633, 28, 16)
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=1581469653]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,13 +30,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TitleSheet" type="Sprite2D" parent="."]
+[node name="TitleSheet" type="Sprite2D" parent="." unique_id=2135191951]
 texture_filter = 1
 position = Vector2(575.2222, 324)
 scale = Vector2(3.588889, 3.588889)
 texture = ExtResource("2_62e2m")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1566116749]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -34,15 +46,15 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -419.0
 offset_top = -89.0
-offset_right = -249.5
-offset_bottom = -28.5
+offset_right = -270.0
+offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 2
 icon = SubResource("AtlasTexture_62e2m")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=1800375287]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -62,10 +74,12 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.017
 anchor_bottom = 0.031000001
-offset_left = 116.0
-offset_top = 104.0
-offset_right = 136.416
-offset_bottom = 123.912
-texture_normal = SubResource("AtlasTexture_kbped")
+offset_left = 145.0
+offset_top = 177.0
+offset_right = 153.416
+offset_bottom = 172.912
+texture_normal = SubResource("AtlasTexture_fj5cn")
+texture_pressed = SubResource("AtlasTexture_iy58a")
+texture_hover = SubResource("AtlasTexture_kbped")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
