@@ -5,8 +5,24 @@
 [ext_resource type="Script" uid="uid://bgkpas3xrl70u" path="res://scenes/level_1_button.gd" id="3_2epne"]
 [ext_resource type="Script" uid="uid://6pknf4wgvx6b" path="res://scenes/level_2_button.gd" id="4_rif6e"]
 [ext_resource type="Script" uid="uid://cda5r6edrfi0r" path="res://scenes/level_3_button.gd" id="5_chg43"]
+[ext_resource type="Texture2D" uid="uid://b5ie6b1uy4ruc" path="res://botonesback.png" id="6_r77uv"]
 
-[node name="levelSelect" type="Control"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4nqmc"]
+load_path = "res://.godot/imported/botonesback.png-a008d657aaa9670ce27305552323b1b6.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7plkq"]
+atlas = SubResource("CompressedTexture2D_4nqmc")
+region = Rect2(2, 19, 25, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckc44"]
+atlas = ExtResource("6_r77uv")
+region = Rect2(2, 36, 25, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2xx4"]
+atlas = ExtResource("6_r77uv")
+region = Rect2(2, 2, 25, 14)
+
+[node name="levelSelect" type="Control" unique_id=1240665833]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p0wlc")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1355454923]
 modulate = Color(0.5890956, 0.5890956, 0.5890956, 1)
 texture_filter = 1
 layout_mode = 1
@@ -26,7 +42,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_2epne")
 
-[node name="level1" type="Button" parent="." groups=["level_buttons"]]
+[node name="level1" type="Button" parent="." unique_id=307756626 groups=["level_buttons"]]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.16800001
@@ -41,7 +57,7 @@ grow_vertical = 2
 text = "LEVEL 1"
 script = ExtResource("3_2epne")
 
-[node name="level2" type="Button" parent="." groups=["level_buttons"]]
+[node name="level2" type="Button" parent="." unique_id=1864779326 groups=["level_buttons"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -57,7 +73,7 @@ grow_vertical = 2
 text = "LEVEL 2"
 script = ExtResource("4_rif6e")
 
-[node name="level3" type="Button" parent="." groups=["level_buttons"]]
+[node name="level3" type="Button" parent="." unique_id=20612103 groups=["level_buttons"]]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.83500004
@@ -73,22 +89,7 @@ grow_vertical = 2
 text = "LEVEL 3"
 script = ExtResource("5_chg43")
 
-[node name="back" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.86600006
-anchor_right = 0.5
-anchor_bottom = 0.86600006
-offset_left = -53.5
-offset_top = -23.16803
-offset_right = 53.5
-offset_bottom = 22.83197
-grow_horizontal = 2
-grow_vertical = 0
-text = "back"
-
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=18386783]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -104,7 +105,25 @@ theme_override_font_sizes/font_size = 48
 text = "LEVEL SELECT!"
 horizontal_alignment = 1
 
+[node name="back" type="TextureButton" parent="." unique_id=1033591712]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.86600006
+anchor_right = 0.5
+anchor_bottom = 0.86600006
+offset_left = -69.75
+offset_top = -39.16803
+offset_right = 69.75
+offset_bottom = 38.83197
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = SubResource("AtlasTexture_7plkq")
+texture_pressed = SubResource("AtlasTexture_ckc44")
+texture_hover = SubResource("AtlasTexture_o2xx4")
+stretch_mode = 4
+
 [connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="level3" to="." method="_on_level_3_pressed"]
-[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
