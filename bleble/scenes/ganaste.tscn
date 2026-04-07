@@ -1,9 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://ds58hibdyt2gy"]
+[gd_scene format=3 uid="uid://ds58hibdyt2gy"]
 
 [ext_resource type="Script" uid="uid://ba1qrrye3vxeq" path="res://scripts/ganaste.gd" id="1_l0yqd"]
 [ext_resource type="Texture2D" uid="uid://bx13swb4aynir" path="res://background.png" id="2_cnpyd"]
+[ext_resource type="Texture2D" uid="uid://b138jtva4dbkl" path="res://botonesrestart.png" id="3_diuee"]
 
-[node name="ganaste" type="Control"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m06f5"]
+atlas = ExtResource("3_diuee")
+region = Rect2(2, 38, 37, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkc3e"]
+atlas = ExtResource("3_diuee")
+region = Rect2(2, 2, 37, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uieeh"]
+atlas = ExtResource("3_diuee")
+region = Rect2(2, 20, 37, 14)
+
+[node name="ganaste" type="Control" unique_id=1851335147]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,12 +25,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l0yqd")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1987673797]
 position = Vector2(585.00006, 323.00003)
 scale = Vector2(3.6666667, 3.6666667)
 texture = ExtResource("2_cnpyd")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1487157446]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -34,7 +47,7 @@ theme_override_font_sizes/font_size = 20
 text = "nivel superado!!!"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1154700723]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -49,20 +62,17 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "siguiente nivel"
 
-[node name="Button2" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 29.0
-offset_top = 32.5
-offset_right = 115.0
-offset_bottom = 63.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "ragequittt"
+[node name="TextureButton" type="TextureButton" parent="." unique_id=852390549]
+texture_filter = 1
+layout_mode = 0
+offset_left = 580.0
+offset_top = 350.0
+offset_right = 685.0
+offset_bottom = 393.0
+texture_normal = SubResource("AtlasTexture_m06f5")
+texture_pressed = SubResource("AtlasTexture_rkc3e")
+texture_hover = SubResource("AtlasTexture_uieeh")
+stretch_mode = 4
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
